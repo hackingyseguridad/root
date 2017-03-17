@@ -199,7 +199,7 @@ int	main(int argc, char *argv[])
 										setresgid(gid, gid, gid);
 
 											printf("-----------------------------------\n");
-												printf(" Linux vmsplice Local Root Exploit\n");
+												printf("Escalado privilegios a root en Linux\n");
 													printf("(c) 2017 www.hackingyseguridad.com\n");
 														printf("-----------------------------------\n");
 
