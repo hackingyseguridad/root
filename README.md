@@ -1,7 +1,7 @@
-# root
+## root
 
-Exploits para escalado de privilegios a root, 
+Exploits para escalado de privilegios a root, OS Linux
 
-## http://hackingyseguridad.com
+### http://hackingyseguridad.com
 
 
