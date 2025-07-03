@@ -1,6 +1,6 @@
 ## root
 
-** Exploits para escalado de privilegios a root, OS Linux
+** Exploits publicos para escalado de privilegios a root, OS Linux
 
 ### CVE-2025-32463 gravedad 9.3 en Sudo versiones afectadas (1.9.14 a 1.9.17)
 #
