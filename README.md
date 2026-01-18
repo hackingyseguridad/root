@@ -19,7 +19,6 @@ $find / -perm -4000 2>/dev/null
 $/usr/bin/sudo /bin/sh -p
 
 $whoami
-root!
 
 <img style="float:left" alt="sudo elevacion de privilegios a root" src="https://github.com/hackingyseguridad/root/blob/master/root.jpg">
 
