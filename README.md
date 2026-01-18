@@ -6,7 +6,7 @@ echo " busca fichero que se ejecutan como root en el sistema:"
 
 find / -perm -4000 2>/dev/null
 
-# por ejemplo ejecutamos una shell con con sudo
+Por ejemplo ejecutamos una shell con con sudo
 
 /usr/bin/sudo /bin/sh -p
 
