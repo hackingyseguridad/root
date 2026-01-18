@@ -21,10 +21,9 @@ $/usr/bin/sudo /bin/sh -p
 $whoami
 root!
 
+<img style="float:left" alt="sudo elevacion de privilegios a root" src="https://github.com/hackingyseguridad/root/blob/master/root.jpg">
 
 **Exploits publicos para elevar privilegios a root, OS Linux**
-
-<img style="float:left" alt="sudo elevacion de privilegios a root" src="https://github.com/hackingyseguridad/root/blob/master/root.jpg">
 
 ### CVE-2025-32463 (gravedad 9.3) en Sudo, versiones afectadas (1.9.14 a 1.9.17)
 #
