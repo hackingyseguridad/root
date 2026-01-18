@@ -10,7 +10,7 @@ sh root.sh
 
 Truco para elevar privlegios a root!
 
-1.- buscamos ficheros que se ejecutan como root en el sistema con:
+1º.- buscamos ficheros que se ejecutan como root en el sistema por ejemplo con:
 
 $find / -perm -4000 2>/dev/null
 
