@@ -22,7 +22,7 @@ $whoami
 root!
 
 
-** Exploits publicos para elevar privilegios a root, OS Linux
+**Exploits publicos para elevar privilegios a root, OS Linux**
 
 <img style="float:left" alt="sudo elevacion de privilegios a root" src="https://github.com/hackingyseguridad/root/blob/master/root.jpg">
 
