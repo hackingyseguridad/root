@@ -14,3 +14,25 @@ find / -perm -4000 2>/dev/null
 /usr/bin/sudo /bin/sh -p
 
 whoami
+
+# Lista de ficheros habituales 
+# /usr/bin/env 
+# /usr/bin/sudo 
+# /usr/bin/su 
+# /usr/bin/pkexec
+# /usr/bin/screen
+# /usr/bin/passwd
+# /usr/bin/chsh 
+# /usr/bin/chfn
+# /usr/bin/newgrp
+# /usr/bin/gpasswd
+# /usr/bin/mount
+# /usr/bin/umount
+# /apps/swbase/CA/AccessControl/bin/sesu 
+# /apps/swbase/CA/AccessControl/bin/sesudo
+# /usr/bin/lxc
+# /usr/bin/at
+
+
+
+
