@@ -10,7 +10,9 @@ sh root.sh
 
 Truco para elevar privlegios a root!
 
-1º.- buscamos ficheros que se ejecutan como root en el sistema por ejemplo con:
+
+1º.- buscamos ficheros con SUID activo como Super User SUID (Set User ID):4000, que se ejecutan como root en el sistema por ejemplo con:
+ 
 
 $find / -perm -4000 2>/dev/null
 
