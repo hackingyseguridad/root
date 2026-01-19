@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Busca ficheros en el sistema que se ejecuten como Super User SUID (Set User ID):4000
+# Busca archivos en el sistema con SUID activo, como Super User SUID (Set User ID):4000
 # Vamos a usar esos ficheros para ejecutar una Shell como SuperUser y elevar a Root
 # (r) hackingyseguridad.com 2026
 # antonio_taboada
