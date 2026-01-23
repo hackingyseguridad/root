@@ -1,19 +1,12 @@
 #!/usr/bin/env python3
 """
 CVE-2026-24061 - GNU inetutils-telnetd Remote Authentication Bypass
-CVSS 9.8 - Instant root shell, no authentication required
-
-Author: IRIS C2 Team
-Date: January 22 2026
-
-Usage:
+CVSS 9.8 - Shell como root, sin autenticar
+Uso:
     ./cve_2026_24061_telnetd.py <target> [port] [user]
-
-Examples:
     ./cve_2026_24061_telnetd.py 192.168.1.1
     ./cve_2026_24061_telnetd.py 192.168.1.1 2323 admin
-
-For command execution:
+command execution:
     echo "id; whoami; uname -a" | ./cve_2026_24061_telnetd.py 192.168.1.1
 """
 
