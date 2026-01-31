@@ -35,6 +35,7 @@ $# sudo chmod +s /bin/bash # esto activa el bit SUID (4000) sobre /bin/bash, cua
 
 **Vulnerabilidades**
 
+CVE-2008-0600
 CVE-2019-14287
 CVE-2021-3156
 CVE-2021-4034
@@ -42,6 +43,12 @@ CVE-2022-0847
 CVE-2024-27397
 CVE-2025-32463
 CVE-2026-24061
+
+### CVE-2008-0600
+
+Vulnerabilidad en la llamada al sistema vmsplice_to_pipe del Linux Kernel que no valida correctamente un puntero de espacio de usuario, permitiendo a un usuario local elevar privilegios a root mediante argumentos manipulados en vmsplice().
+Versiones afectadas: Linux Kernel 2.6.17 hasta 2.6.24.1.
+Método de explotación: Llamada local a vmsplice() con argumentos especialmente construidos que llevan a la lectura/uso incorrecto de un puntero sin validar, causando escalado de privilegios.
 
 ### CVE-2019-14287
 
