@@ -1,6 +1,6 @@
-### CVE-2009-2692
+### CVE-2008-0600
 
-**CVE-2009-2692**  Afecta a: Linux kernel 2.6.0 hasta ~2.6.30 
+**CVE-2008-0600**  Afecta a: Linux kernel 2.6.0 hasta ~2.6.30 
 
 inicialización incorrecta de punteros en estructuras proto_ops provoca NULL pointer dereference que puede explotarse para ejecutar código en contexto de kernel y obtener root.
 
