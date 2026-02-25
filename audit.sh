@@ -1,7 +1,6 @@
 #!/bin/bash
 # Script de auditoría avanzada para Linux
-# Versión: 2.0
-# Uso: ./audit_completo.sh [opciones]
+# Uso: ./audit.sh [opciones]
 # Opciones: -v (verbose), -o archivo (guardar salida)
 
 # Configuración
