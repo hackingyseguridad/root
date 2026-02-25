@@ -92,7 +92,53 @@ Vulnerabilidad CVE-2025-32463 gravedad 9.3 (CRÍTICO) en Sudo. - es una vulnerab
 **Resumen:** Error de validación en la variable de entorno `USER`: telnetd pasa ese valor directamente a `/usr/bin/login`, lo que permite a un atacante remoto enviar `USER=-f root` y forzar un bypass de autenticación, obteniendo acceso directo como root.
 **Método de explotación:** Conexión remota por Telnet con un valor de entorno manipulada (`USER=-f root`) para forzar `login` a omitir autenticaciones y otorgar acceso como root.
 
----
+
+CVE-2025-32463 — *sudo* chroot option permite escalar privilegios a root cargando librerías maliciosas desde un entorno chroot. :contentReference[oaicite:0]{index=0}
+
+CVE-2025-32462 — Incorrecta aplicación de la opción --host que puede permitir bypass de restricciones de *sudoers*. :contentReference[oaicite:1]{index=1}
+
+CVE-2023-22809 — *sudoedit* malinterpreta argumentos extra de EDITOR/SUDO_EDITOR/VISUAL facilitando escalación local de privilegios. :contentReference[oaicite:2]{index=2}
+
+CVE-2023-28487 — *sudoreplay -l* no escapa correctamente caracteres de control, exponiendo posible abuso de sesión (no directamente elevación). :contentReference[oaicite:3]{index=3}
+
+CVE-2023-27320 — Doble liberación (*double free*) en el soporte de chroot por comando que puede permitir corrupción y escalada. :contentReference[oaicite:4]{index=4}
+
+CVE-2023-7090 — Manejo incorrecto de *ipa_hostname* en sudo puede provocar retención inapropiada de privilegios. :contentReference[oaicite:5]{index=5}
+
+CVE-2021-23240 — *sudoedit* con SELinux puede escalar privilegios mediante enlace simbólico en archivos temporales. :contentReference[oaicite:6]{index=6}
+
+CVE-2021-23239 — Race condition en *sudoedit* permite pruebas de existencia de directorios arbitrarios por symlinks. :contentReference[oaicite:7]{index=7}
+
+CVE-2021-3156 — Desbordamiento de pila en sudo (“baron samedit”) que permite a usuarios locales obtener root sin credenciales especiales. :contentReference[oaicite:8]{index=8}
+
+CVE-2019-19234 — *sudo* no bloquea correctamente usuarios bloqueados, lo que permite suplantación con privilegios de Runas ALL. :contentReference[oaicite:9]{index=9}
+
+CVE-2019-19232 — Similar a CVE-2019-19234: abuso del permiso Runas ALL para impersonar otros usuarios. :contentReference[oaicite:10]{index=10}
+
+CVE-2019-18634 — Buffer overflow basado en pila si `pwfeedback` está habilitado en sudoers, pudiendo resultar en escalada. :contentReference[oaicite:11]{index=11}
+
+CVE-2017-1000368 — *sudo* versiones antiguas tienen vulnerabilidad de privilegios por manejo inseguro de archivos/paths. :contentReference[oaicite:12]{index=12}
+
+CVE-2017-1000367 — Entrada de usuario mal manejada permite bypass de controles y potencial elevación de privilegios. :contentReference[oaicite:13]{index=13}
+
+CVE-2016-7091 — Configuración predeterminada en algunas distros permite escalada de privilegios debido a mal control de reglas. :contentReference[oaicite:14]{index=14}
+
+CVE-2016-7076 — *sudo* anterior a 1.8.18p1 tiene bypass en la política *noexec* permitiendo ejecución no autorizada. :contentReference[oaicite:15]{index=15}
+
+CVE-2016-7032 — Módulo `sudo_noexec.so` permite a usuarios locales eludir restricciones *noexec*. :contentReference[oaicite:16]{index=16}
+
+CVE-2015-8239 — Fallo en soporte SHA-2 en plugin *sudoers* permitiendo abuso de autenticación/privilegios. :contentReference[oaicite:17]{index=17}
+
+CVE-2015-5602 — *sudoedit* permite escalación de privilegios locales en versiones anteriores a 1.8.15. :contentReference[oaicite:18]{index=18}
+
+CVE-2014-9680 — *sudo* anterior a 1.8.12 no valida adecuadamente variable TZ permitiendo escalada local. :contentReference[oaicite:19]{index=19}
+
+CVE-2014-0106 — *env_reset* deshabilitado permite fallos de seguridad potenciales con escalación local. :contentReference[oaicite:20]{index=20}
+
+CVE-2013-2777 — *tty_tickets* mal implementado puede permitir explotación y escalación local. :contentReference[oaicite:21]{index=21}
+
+CVE-2013-2776 — Versiones antiguas de *sudo* con reglas de *Runas* y versiones problemáticas permitían escalación. :contentReference[oaicite:22]{index=22}
+
 
 
 #
