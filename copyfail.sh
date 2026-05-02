@@ -29,7 +29,7 @@ while IFS= read -r line; do
             if [ "$mayor" -gt 4 ] 2>/dev/null || [ "$mayor" -eq 4 -a "$menor" -ge 14 ] 2>/dev/null; then
                 echo "Potecial VULNERABLE !!!! Host: $current_host - Kernel: $kernel_ver (>= 4.14)"
             elif [ "$mayor" -lt 4 ] 2>/dev/null || [ "$mayor" -eq 4 -a "$menor" -lt 14 ] 2>/dev/null; then
-                echo "Potencialmente anterior a 4.14: $current_host - Kernel: $kernel_ver (< 4.14)"
+                echo "... anterior a Kernel 4.14: $current_host - Kernel: $kernel_ver (< 4.14)"
             else
                 echo "❓ No se pudo encontrar: $current_host - $kernel_ver"
             fi
