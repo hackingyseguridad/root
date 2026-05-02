@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Script: copyfail.sh detecta versiones de Kernel, en remoto, en red
+# CVE-2026-31431 (7.8) Kernel Linux “Copy Fail”, Kernel version > 4.13
 # Uso.:  sh copyfail.sh  rango/IP
 # nmap -Pn -F $1 $2 $3 --open -sV -O --osscan-guess -oN resultado.txt
 # Guarda el resultado del escaneo en el fichero: resultado.txt
