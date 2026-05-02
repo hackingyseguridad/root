@@ -1,12 +1,13 @@
 #!/bin/sh
 
 # Script: copyfail.sh detecta versiones de Kernel, en remoto, en red
-# Uso.:  copyfail.sh  rango/IP
+# Uso.:  sh copyfail.sh  rango/IP
+# nmap -Pn -F $1 $2 $3 --open -sV -O --osscan-guess -oN resultado.txt
 # Guarda el resultado del escaneo en el fichero: resultado.txt
 # @antonio_taboada - 
 
+echo
 echo "Detecta CVE-2026-31431 (Copy Fail) - Kernel >= 4.14 = potenciales vulnerables !!!"
-echo "nmap -Pn -F $1 $2 $3 --open -sV -O --osscan-guess -oN resultado.txt"
 
 nmap -Pn -F "$1" $2 $3 --open -sV -O --osscan-guess -oN resultado.txt  > /dev/null 2>&1
 RESULT_FILE="resultado.txt"
