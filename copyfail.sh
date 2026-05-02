@@ -1,35 +1,17 @@
 #!/bin/sh
-# Script: check_copyfail.sh
-# Uso 1 (escaneo + análisis): ./check_copyfail.sh <target>
-# Uso 2 (solo análisis): ./check_copyfail.sh --read resultado.txt
 
-echo "[*] Detector CVE-2026-31431 (Copy Fail) - Kernel >= 4.14 = potencialmente vulnerable"
+# Script: copyfail.sh detecta versiones de Kernel, en remoto, en red
+# Uso.:  copyfail.sh  rango/IP
+# Guarda el resultado del escaneo en el fichero: resultado.txt
+# @antonio_taboada - 
 
-# Modo solo lectura de resultado.txt existente
-if [ "$1" = "--read" ] && [ -f "$2" ]; then
-    RESULT_FILE="$2"
-    echo "[*] Leyendo archivo existente: $RESULT_FILE"
-else
-    # Modo normal: ejecutar nmap y guardar en resultado.txt
-    if [ -z "$1" ]; then
-        echo "Uso: $0 <target> [parámetros_nmap]"
-        echo "     $0 --read resultado.txt"
-        echo "Ejemplo: $0 192.168.1.100"
-        echo "Ejemplo con puertos: $0 192.168.1.100 -p 22,80,443"
-        exit 1
-    fi
+echo "Detecta CVE-2026-31431 (Copy Fail) - Kernel >= 4.14 = potenciales vulnerables !!!"
+echo "nmap -Pn -F $1 $2 $3 --open -sV -O --osscan-guess -oN resultado.txt"
 
-    echo "[+] Ejecutando nmap -Pn -F $1 $2 $3 --open -sV -O --osscan-guess -oN resultado.txt"
-    nmap -Pn -F "$1" $2 $3 --open -sV -O --osscan-guess -oN resultado.txt  > /dev/null 2>&1
-    RESULT_FILE="resultado.txt"
-fi
-
-echo "[+] Analizando $RESULT_FILE..."
-
-# Variable para almacenar el host actual
+nmap -Pn -F "$1" $2 $3 --open -sV -O --osscan-guess -oN resultado.txt  > /dev/null 2>&1
+RESULT_FILE="resultado.txt"
 current_host=""
 
-# Leer línea por línea el archivo resultado.txt
 while IFS= read -r line; do
     # Capturar dirección IP / hostname
     case "$line" in
@@ -38,7 +20,6 @@ while IFS= read -r line; do
             ;;
     esac
 
-    # Buscar líneas con "OS details" o "Running" o "Kernel"
     echo "$line" | grep -i -E "OS details|Running|Kernel|Linux [0-9]" > /dev/null
     if [ $? -eq 0 ]; then
         # Extraer versión de kernel (Linux X.Y.Z o Linux X.Y)
@@ -60,5 +41,5 @@ while IFS= read -r line; do
 done < "$RESULT_FILE"
 
 echo ""
-echo "[*] Análisis completado. Revise manualmente $RESULT_FILE para más detalles."
-echo "[*] Nota: La detección remota de kernel por nmap no es 100% precisa."
+echo "Revise manualmente $RESULT_FILE para más detalles."
+
