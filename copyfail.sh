@@ -36,7 +36,6 @@ while IFS= read -r line; do
         fi
     fi
 done < "$RESULT_FILE"
+echo 
 
-echo ""
-echo "Revise manualmente $RESULT_FILE para más detalles."
 
